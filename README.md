@@ -41,5 +41,29 @@ git remote rm xxx
 git push -u remotename master
 ```
 
----
+## 下载方式
+### 以 git readonly 方式克隆到本地（只读）
+```bash
+git clone git://github.com:xxxx/test.git
+```
+
+### 以 SSH 方式克隆到本地（读写）
+```bash
+git clone git@github.com:xxx/test.git
+```
+
+### 以 HTTPS 方式克隆到本地（读写）
+```bash
+git clone https://github.com/xxx/test.git
+```
+
+### 获取内容到本地但不合并
+```bash
+git fetch git@github.com:xxx/xxx.git
+```
+
+### 获取并合并内容到本地
+```bash
+git pull git@github.com:xxx/xxx.git
+```
 
