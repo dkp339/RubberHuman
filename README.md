@@ -67,3 +67,46 @@ git fetch git@github.com:xxx/xxx.git
 git pull git@github.com:xxx/xxx.git
 ```
 
+## 分支操作
+
+### 创建分支
+```bash
+git branch          # 显示当前分支是 master
+git branch new_bra  # 创建分支命名为 new_bra
+git checkout new_bra  # 切换到新分支
+git add branch.txt
+git commit -m "added branch.txt"
+git push readme_test new_bra  # 提交分支到远程服务器
+```
+
+### 合并分支
+```bash
+git checkout master         # 切换到主干
+git merge new_bra           # 合并 new_bra 分支到主干
+git branch                  # 显示当前分支是 master
+git push readme_test master # 提交主干更新到远程
+```
+
+---
+
+## 其他命令
+
+### 更新远程分支列表
+```bash
+git remote update 别名 --prune
+```
+
+### 查看所有分支
+```bash
+git branch -a
+```
+
+### 删除远程分支
+```bash
+git push 别名 --delete 分支名
+```
+
+### 删除本地分支
+```bash
+git branch -d 分支名
+```
