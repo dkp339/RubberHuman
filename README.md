@@ -34,7 +34,8 @@ git remote rm xxx
 ```
 
 ### 提交本地文件到 GitHub 的远程版本库
-- `remoname` 为远程版本库的别名，`master` 为主分支。
+- `remotename` 为远程版本库的别名，`master` 为主分支。
+- `-u` 是 `--set-upstream` 的简写。它的作用是将当前分支与远程仓库的某个分支关联起来，并且在以后的 `git push` 和 `git pull` 操作中，不需要再指定远程分支的名称。通过这种方式，Git 会记住远程分支的信息，方便后续操作。
 - 此时才更新了本地变更到 GitHub 服务上。
 ```bash
 git push -u remotename master
